@@ -24,15 +24,17 @@
 
 3. User SSO to `Assistant` as they've already authenticated to `Auth0`.
 
-4. `Assistant` identifies the user and creates and email verification ticket and sends them an email with the verification link.
+4. `Assistant` identifies the user and creates an `email verification ticket` and sends them an `email` with the `verification link`.
 
-5. After user clicks on the link from their email, Auth0 marks them as `email_verified = true`
+5. The `result_url` for the `email verification ticket` should be the `Application Login URI` which should start a new `Authorization Request` with Auth0.
+
+6. After user clicks on the link from their email, Auth0 marks the user profile with `email_verified = true`.
 
 ![Alt text](screenshots/3-redirect-to-assistant.png "App Splash Screen")
 
 ### User is Authenticated to App
 
-1. User now logs in to the appliation successfully (without entering credentials again).
+1. User is now redirected to the `Application Login URI` and logs in to the App (without entering credentials again).
 
 2. Notice in the screenshot that the `email_verified` claim is `true`.
 
