@@ -18,9 +18,9 @@
 
 ### Redirect to Assistant
 
-1. Auth0 `Rule` checks that user has **not yet verified** their `email`.
+1. Auth0 [Rule](rule/enforce-email-verification.js) checks that user has **not yet verified** their `email`.
 
-2. Rule then redirects the user to `Assistant` server-side web app.
+2. [Rule](rule/enforce-email-verification.js) then redirects the user to `Assistant` server-side web app.
 
 3. User SSO to `Assistant` as they've already authenticated to `Auth0`.
 
